@@ -1,7 +1,5 @@
 <template>
-  <div class="login">
-    <Login @login="handleLogin" />
-  </div>
+  <Login @login="handleLogin" />
 </template>
 
 <script lang="ts">
