@@ -2,7 +2,14 @@
   <div class="w-full">
     <div class="w-full p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
       <div class="overflow-x-auto">
-        <div class="text-left text-xl font-bold mt-2 mb-5">List History</div>
+        <div class="flex justify-between">
+          <div class="text-left text-xl font-bold mt-2 mb-5">List History</div>
+          <button
+            class="text-white bg-blue-600 hover:bg-blue-700 px-7 rounded-lg text-sm h-fit py-2.5"
+          >
+            Add new user
+          </button>
+        </div>
         <table class="min-w-full bg-white border border-gray-300 rounded-lg shadow-md">
           <thead>
             <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
@@ -42,21 +49,19 @@
         </table>
       </div>
     </div>
-    <div class="text-right mt-6 mr-4">
-      <button
-        class="text-white text-xl bg-blue-600 hover:bg-blue-700 focus:ring-blue-300 px-7 py-4 focus:ring-4 focus:outline-none rounded-lg text-sm px-5 py-2.5"
-      >
-        Add new user
-      </button>
-    </div>
+    <div class="mx-4"><Pagination /></div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import Pagination from "./Pagination.vue";
 
 export default defineComponent({
   name: "History",
+  components: {
+    Pagination,
+  },
   data() {
     return {
       history: [

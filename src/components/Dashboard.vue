@@ -63,6 +63,9 @@
             </tr>
           </tbody>
         </table>
+        <div class="mt-4">
+          <Pagination />
+        </div>
       </div>
     </div>
   </div>
@@ -70,9 +73,13 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import Pagination from "./Pagination.vue";
 
 export default defineComponent({
   name: "Dashboard",
+  components: {
+    Pagination,
+  },
   data() {
     return {
       nonActiveUsers: [

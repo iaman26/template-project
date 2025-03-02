@@ -1,11 +1,9 @@
 <template>
   <div class="flex w-full justify-center">
-    <img src="/src/assets/images/banner-login.png" class="w-full" alt="" />
-    <div class="dark:bg-gray-900 w-[448px]">
+    <img src="/src/assets/images/banner-login.png" class="banner" alt="" />
+    <div class="bg-white relative width-form">
       <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-        <div
-          class="w-[448px] rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700"
-        >
+        <div class="w-full non-border rounded-lg shadow dark:border md:mt-0 sm:max-w-lg xl:p-0">
           <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1
               class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white"
@@ -185,12 +183,42 @@ export default defineComponent({
 .button {
   margin-top: 12px;
 }
+.banner {
+  display: none;
+}
 @media screen and (min-width: 1280px) {
   .login-with {
     flex-direction: row;
   }
   .button {
     margin-top: 0;
+  }
+  .banner {
+    width: 65%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .banner {
+    width: 60%;
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner {
+    width: 50%;
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .non-border {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .login-with {
+    flex-direction: row;
+  }
+  .width-form {
+    width: 100%;
   }
 }
 </style>
