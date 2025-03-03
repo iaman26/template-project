@@ -7,7 +7,7 @@
         src="/src/assets/images/profile-picture-5.jpg"
         alt="Rounded avatar"
       />
-      <div class="text-gray-500 mx-3">{{ email }}</div>
+      <div class="text-gray-500 mx-3 flex align-center">{{ email }}</div>
       <button @click="Logout" class="text-gray-500">Log out</button>
     </div>
   </div>
